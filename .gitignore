@@ -1,0 +1,11 @@
+*cogs/__pycache__
+*cogs/modmail.py
+*cogs/fun.py
+*.idea
+*__pycache__
+*discontinued
+*venv
+*.gitattributes
+*,gitignore
+*db.py
+*modmail_temp.py
