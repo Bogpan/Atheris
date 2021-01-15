@@ -7,6 +7,7 @@ import asyncio
 from utils import *
 
 
+
 async def _get_prefix(bot, message):
     guild_prefix = "."
     if message.guild is not None:
@@ -49,13 +50,13 @@ async def async_init():
     bot.muted_role = muted_role
     bot.muted = muted
 
+
 intents = discord.Intents.all()
 allowed_mentions = discord.AllowedMentions.none()
 activity = discord.Activity(name='.info', type=discord.ActivityType.playing)
 bot = commands.Bot(command_prefix=_get_prefix, intents=intents, max_messages=20000, case_insensitive=True,
                    help_command=None, activity=activity, allowed_mentions=allowed_mentions)
 bot.loop.create_task(async_init())
-
 
 bot.owner_ids = [287256464047865857, 405798011172814868]
 bot.green = discord.Colour(0x30c21d)
